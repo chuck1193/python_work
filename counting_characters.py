@@ -5,7 +5,7 @@ def counting_characters():
 
   if len(words) == 0:
     print("You've given me nothing.")
-    counting_characters()
+    counting_characters(2)
   else: 
     print(words + " has " + str(length) + " characters.")
 
