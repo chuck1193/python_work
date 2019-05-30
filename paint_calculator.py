@@ -1,3 +1,5 @@
+import math
+
 def paint_calculator():
 
   round = input("Is your room round? ")
@@ -17,7 +19,8 @@ def paint_calculator():
         length2 = int(length)
         radius = length2 / 2
         area_circle = 3.14 * (radius**2)
-        gallons = area_circle / 350
+        gall = area_circle / 350
+        gallons = math.ceil(gall)
         print("You will need to purchase " + str(gallons) + " gallons of paint to paint " + str(area_circle) + " square feet of room.")
   elif (lshaped == 'yes'):
       print("To figure out the area for an L shaped room we have to divide the room into two different rectangle and then I will add them together.")
@@ -29,7 +32,9 @@ def paint_calculator():
 
       area_lshaped = (rectangle1_length * rectangle1_width) + (rectangle2_length * rectangle2_width)
 
-      gallons2 = area_lshaped / 350
+      gall2 = area_lshaped / 350
+
+      gallons2 = math.ceil(gall2)
 
       print("You will need to purchase " + str(gallons2) + " gallons of paint to paint " + str(area_lshaped) + " square feet of ceiling.")
 
@@ -41,7 +46,9 @@ def paint_calculator():
       width = int(wid1)
 
       area = length * width
-      gallons = area / 350
+      gall = area / 350
+
+      gallons = math.ceil(gall)
 
       print("You will need to purchase " + str(gallons) + " gallons of paint to paint " + str(area) + " square feet of room.")
 
