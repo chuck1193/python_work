@@ -1,3 +1,5 @@
+import math
+
 def pizza_party():
 
   int1 = input("How many people? ")
